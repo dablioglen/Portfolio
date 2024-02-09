@@ -373,13 +373,13 @@
 
         emailjs.send(serviceID, templateID, params)
             .then(function(response) {
-                showModal("Message sent successfully");
+                showModal("Message sent successfully, Thankyou for messaging i will respond to you as soon as possible");
                 // Clear input fields after successful submission
                 document.getElementById("sendername").value = "";
                 document.getElementById("replyto").value = "";
                 document.getElementById("message").value = "";
             }, function(error) {
-                showModal("Failed to send message. Please try again later.");
+                showModal("Too many request, please try again later");
                 console.error('EmailJS Error:', error);
             });
     }
